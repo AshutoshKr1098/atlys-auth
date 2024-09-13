@@ -6,15 +6,10 @@ import RegisterForm from "../components/RegisterForm";
 import { ROUTE_CONSTANTS } from "../routes";
 
 const Login = () => {
-  const { isAuthenticated, login, logout } = useAuthentication();
-  const [loginView, setLoginView] = useState(true);
+  const { isAuthenticated, login, toggleView, loginView } = useAuthentication();
   if (isAuthenticated) {
     return <Navigate to={ROUTE_CONSTANTS.HOME} />;
   }
-
-  const toggleView = () => {
-    setLoginView((prev) => !prev);
-  };
 
   return (
     <div className='flex items-center justify-center h-full w-full'>

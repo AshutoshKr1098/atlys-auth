@@ -43,7 +43,7 @@ const Modal: React.FC<ModalProps> = ({
           leaveTo='scale-75'>
           <div
             className={clsx([
-              "bg-white p-6 rounded-lg shadow-lg w-11/12 max-w-lg",
+              "p-6 rounded-lg shadow-lg w-11/12 max-w-lg",
               customClass,
             ])}>
             {children}
