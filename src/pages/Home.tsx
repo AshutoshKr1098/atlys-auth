@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Homepage from "../components/Homepage";
-import Login from "../components/LoginForm";
+import Login from "../components/AuthenticationForms/LoginForm";
 import Modal from "../components/ui/Modal";
 import { useAuthentication } from "../hooks/useAuthentication";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CTAButton from "./ui/CTAButton";
-import InputField from "./ui/InputField"; // Ensure InputField is correctly imported
+import CTAButton from "../ui/CTAButton";
+import InputField from "../ui/InputField"; // Ensure InputField is correctly imported
 
 interface InputFieldConfig {
   label?: string;
@@ -62,7 +62,9 @@ const Form: React.FC<FormProps> = ({
           <CTAButton variant='primary' text={buttonText} onClick={onSubmit} />
           {toggleView && (
             <p className='text-sm leading-4 font-medium text-gray-500 mt-3'>
-              {buttonText === "Login now" ? "Not registered yet? " : "Already have an account? "}
+              {buttonText === "Login now"
+                ? "Not registered yet? "
+                : "Already have an account? "}
               <span
                 className='text-gray-100 cursor-pointer'
                 onClick={toggleView}>

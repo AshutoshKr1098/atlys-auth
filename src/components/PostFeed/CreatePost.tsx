@@ -1,6 +1,6 @@
-import PostCard from "./ui/PostCard";
-import CardTextArea from "./ui/CardTextArea";
-import CTAButton from "./ui/CTAButton";
+import PostCard from "../ui/PostCard";
+import CardTextArea from "../ui/CardTextArea";
+import CTAButton from "../ui/CTAButton";
 
 const CreatePost = () => {
   function createPost() {

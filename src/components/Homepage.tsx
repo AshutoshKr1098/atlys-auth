@@ -1,13 +1,11 @@
-import React from "react";
 import UserIntroduction from "./UserIntroduction";
-import CreatePost from "./CreatePost";
+import PostFeed from "./PostFeed";
 
 const Homepage = () => {
   return (
     <div className='max-w-[700px] mx-auto'>
       <UserIntroduction />
-      <CreatePost />
-      {/* <Posts /> */}
+      <PostFeed />
     </div>
   );
 };

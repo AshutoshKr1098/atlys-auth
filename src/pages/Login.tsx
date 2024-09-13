@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useAuthentication } from "../hooks/useAuthentication";
 import { Navigate } from "react-router-dom";
-import LoginForm from "../components/LoginForm";
-import RegisterForm from "../components/RegisterForm";
+import LoginForm from "../components/AuthenticationForms/LoginForm";
+import RegisterForm from "../components/AuthenticationForms/RegisterForm";
 import { ROUTE_CONSTANTS } from "../routes";
 
 const Login = () => {
