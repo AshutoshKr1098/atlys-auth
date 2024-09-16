@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Project: Mini Frontend App with Auth Flow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project is a mini frontend application that implements a basic authentication flow. Users can register, log in, and access restricted content based on their authentication status. The app aims to demonstrate a simple but effective way of managing authentication states and transitions in a frontend app.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **React 18**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Headless UI**: A library of unstyled, accessible UI components designed for Tailwind CSS.
+- **TypeScript**: TypeScript is a syntactic superset of JavaScript which adds static typing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to Run the Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository
+2. Install the dependencies using npm:
+   ```bash
+   npm install
+   npm run start
+   ```
+3. Open the app in your browser at http://localhost:3000
 
-### `npm test`
+## Project Navigation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. All the routes are mentioned in routes.tsx file ( Currently it has 2 routes, '/' and '/login')
+2. The screens corresponding to each route is present in /pages directory inside the src folder.
+3. Each page picks the corresponding component from /src/components 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
