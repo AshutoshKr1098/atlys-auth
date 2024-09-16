@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import { Transition } from "@headlessui/react";
 import clsx from "clsx";
+import CloseIcon from "../../assets/icons/CloseIcon";
 
 interface ModalProps {
   isOpen: boolean;
@@ -43,10 +44,15 @@ const Modal: React.FC<ModalProps> = ({
           leaveTo='scale-75'>
           <div
             className={clsx([
-              "p-6 rounded-lg shadow-lg w-11/12 max-w-lg",
+              "p-6 rounded-lg shadow-lg w-11/12 max-w-lg relative",
               customClass,
             ])}>
-            {children}
+            <div
+              className='absolute right-[40px] top-[40px] cursor-pointer'
+              onClick={onClose}>
+              <CloseIcon />
+            </div>
+            <div>{children}</div>
           </div>
         </Transition>
       </div>
