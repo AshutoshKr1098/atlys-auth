@@ -16,6 +16,7 @@ interface FormProps {
   title: string;
   subtitle: string;
   buttonText: string;
+  disabled?: boolean;
   onSubmit: () => void;
   toggleView?: () => void; // Optional, for cases like login/register toggle
   inputFieldsConfig: InputFieldConfig[];
@@ -25,6 +26,7 @@ const Form: React.FC<FormProps> = ({
   title,
   subtitle,
   buttonText,
+  disabled = false,
   onSubmit,
   toggleView,
   inputFieldsConfig,
@@ -59,7 +61,13 @@ const Form: React.FC<FormProps> = ({
 
         {/* Submit Button */}
         <section className='mt-4'>
-          <CTAButton variant='primary' text={buttonText} onClick={onSubmit} />
+          <CTAButton
+            variant='primary'
+            text={buttonText}
+            onClick={onSubmit}
+            disabled={disabled}
+            customStyle='w-full'
+          />
           {toggleView && (
             <p className='text-sm leading-4 font-medium text-gray-500 mt-3'>
               {buttonText === "Login now"

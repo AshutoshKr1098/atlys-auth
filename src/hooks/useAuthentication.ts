@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 
 export const useAuthentication = () => {
   const [loginView, setLoginView] = useState(true);
-  const { loggedIn, login, logout } = useAuth();
+  const { loggedIn, login, logout, loggedUser } = useAuth();
 
   const toggleView = () => {
     setLoginView((prev) => !prev);
@@ -16,5 +16,6 @@ export const useAuthentication = () => {
     isAuthenticated: loggedIn,
     toggleView,
     loginView,
+    loggedUser,
   };
 };

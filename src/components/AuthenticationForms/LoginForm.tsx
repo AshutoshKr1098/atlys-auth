@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import Form from "./Form";
+import { allFieldsFilled } from "../../utils";
 
 interface LoginProps {
   toggleView: () => void;
-  login: () => void;
+  login: (key: string) => void;
 }
 
 const Login: React.FC<LoginProps> = ({ toggleView, login }) => {
@@ -46,7 +47,8 @@ const Login: React.FC<LoginProps> = ({ toggleView, login }) => {
       title='Welcome Back'
       subtitle='Log into your account'
       buttonText='Login now'
-      onSubmit={login}
+      disabled={!allFieldsFilled(formValues)}
+      onSubmit={() => login(formValues.email)}
       toggleView={toggleView}
       inputFieldsConfig={inputFieldsConfig}
     />

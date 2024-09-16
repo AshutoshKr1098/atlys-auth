@@ -18,7 +18,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   customStyle = "",
 }) => {
   // Define variant-based styles using Tailwind CSS
-  const baseStyle = "w-full px-4 py-2 rounded text-sm font-medium";
+  const baseStyle = "px-4 py-2 rounded text-sm font-medium";
 
   const variantStyle = {
     primary: "bg-blue text-white hover:bg-blue-600",

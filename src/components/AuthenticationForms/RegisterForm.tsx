@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./Form";
+import { allFieldsFilled } from "../../utils";
 
 interface RegisterProps {
   toggleView: () => void;
@@ -53,9 +54,8 @@ const Register: React.FC<RegisterProps> = ({ toggleView }) => {
       title='Sign Up'
       subtitle='Create an account to continue'
       buttonText='Continue'
-      onSubmit={() => {
-        /* handle registration */
-      }}
+      disabled={!allFieldsFilled(formValues)}
+      onSubmit={toggleView}
       toggleView={toggleView}
       inputFieldsConfig={inputFieldsConfig}
     />
