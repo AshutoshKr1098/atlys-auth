@@ -39,7 +39,7 @@ const CreatePost = () => {
         onClose={() => {
           setOpen(false);
         }}>
-        <Authenticate />
+        <Authenticate onClose={() => setOpen(false)} />
       </Modal>
     </>
   );
