@@ -51,7 +51,7 @@ const InputField: React.FC<InputFieldProps> = ({
           type='text'
           className={`w-full bg-black-700 p-3 text-gray-500 font-normal py-2 text-sm border-[1.5px] rounded-lg focus:outline-none ${
             isValid ? "border-gray-900" : "border-red-300"
-          } ${icon ? "pl-10" : ""}`}
+          }`}
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
@@ -59,7 +59,7 @@ const InputField: React.FC<InputFieldProps> = ({
 
         {/* Icon Placement */}
         {icon && (
-          <span className='absolute left-3 top-1/2 transform -translate-y-1/2'>
+          <span className='absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer'>
             {icon}
           </span>
         )}

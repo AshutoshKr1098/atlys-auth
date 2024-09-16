@@ -10,6 +10,7 @@ interface InputFieldConfig {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   validationRegex?: RegExp;
   validationText?: string;
+  icon?: React.ReactNode;
 }
 
 interface FormProps {
@@ -55,6 +56,7 @@ const Form: React.FC<FormProps> = ({
               onChange={input.onChange}
               validationRegex={input.validationRegex}
               validationText={input.validationText}
+              icon={input.icon}
             />
           ))}
         </section>

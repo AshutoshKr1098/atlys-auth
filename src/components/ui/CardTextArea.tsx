@@ -13,7 +13,7 @@ const CardTextArea: React.FC<CardTextAreaProps> = ({
       <div className='bg-black-700 size-12 rounded-full flex items-center justify-center'>
         {emoji}
       </div>
-      <div>{text}</div>
+      <div className="max-w-[90%]">{text}</div>
     </div>
   );
 };

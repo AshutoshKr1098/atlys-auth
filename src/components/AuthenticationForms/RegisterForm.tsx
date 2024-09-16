@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import { allFieldsFilled } from "../../utils";
+import { PasswordEyeIcon } from "../../assets/icons/PasswordEyeIcon";
 
 interface RegisterProps {
   toggleView: () => void;
@@ -46,6 +47,7 @@ const Register: React.FC<RegisterProps> = ({ toggleView }) => {
       validationText: "Password must be at least 8 characters long",
       value: formValues.password,
       onChange: handleInputChange("password"),
+      icon: <PasswordEyeIcon />
     },
   ];
 
